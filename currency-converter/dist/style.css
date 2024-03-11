@@ -1,0 +1,265 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css");
+@import url("https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 0 10px;
+  background: linear-gradient(to bottom right, #1a212d, #131722);
+}
+
+.wrapper {
+  width: 30rem;
+  padding: 30px;
+  border-radius: 7px;
+  background: #161922;
+  color: white;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 1s ease;
+}
+
+.wrapper h2 {
+  font-size: 2.2rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+.wrapper form {
+  margin: 40px 0 20px 0;
+}
+
+form :where(input, select, button) {
+  width: 100%;
+  outline: none;
+  border-radius: 5px;
+  border: none;
+  background: rgba(255, 255, 255, 0.05);
+  color: #ffffff;
+}
+
+form p {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+form input {
+  height: 50px;
+  font-size: 1.2rem;
+  padding: 0 15px;
+  color: white;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+form input:focus {
+  padding: 0 14px;
+  border: 2px solid #675afe;
+}
+
+.form-control {
+  position: relative;
+}
+
+.form-control:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: #675afe;
+  transition: all 0.3s ease;
+}
+
+.form-control:focus-within:before {
+  width: 100%;
+}
+
+form .drop-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.from,
+.to {
+  width: 100%;
+}
+
+.drop-list .select-box {
+  display: flex;
+  width: 100%;
+  height: 45px;
+  align-items: center;
+  border-radius: 5px;
+  padding: 0 20px;
+  border: 1px solid #999;
+  background: #20232c;
+}
+
+.select-box img {
+  max-width: 21px;
+}
+
+.select-box select {
+  width: 100%;
+  font-size: 1.1rem;
+  background: none;
+  margin: 0 -5px 0 5px;
+  color: white;
+  background: #20232c;
+}
+
+.select-box select::-webkit-scrollbar {
+  width: 8px;
+}
+
+.select-box select::-webkit-scrollbar-track {
+  background: #fff;
+}
+
+.select-box select::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 8px;
+  border-right: 2px solid #ffffff;
+}
+
+.drop-list .icon {
+  cursor: pointer;
+  margin-top: 10px;
+  font-size: 22px;
+  transform: rotate(90deg);
+}
+
+form .exchange-rate {
+  font-size: 1.1rem;
+  margin: 20px 0 30px;
+  color: #ffffff;
+}
+
+form button {
+  height: 52px;
+  color: #fff;
+  font-size: 1.2rem;
+  cursor: pointer;
+  background: #20232c;
+  border: none;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+form button:hover {
+  background: #675afe;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.wrapper {
+  background: transparent;
+  box-shadow: none;
+}
+
+.wrapper form {
+  background: transparent;
+}
+
+form :where(input, select, button) {
+  background: rgba(255, 255, 255, 0.05);
+  color: #ffffff;
+}
+
+.form-control:before {
+  background-color: #675afe;
+}
+
+.drop-list .select-box {
+  background: #20232c;
+}
+
+.form-control:focus-within:before {
+  width: 100%;
+}
+
+form button:hover {
+  background: #675afe;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.toggle-label {
+  opacity: 0;
+  animation: fadeInToggle 1s ease forwards;
+}
+
+@keyframes fadeInToggle {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.wrapper {
+  animation: fadeInWrapper 1s ease forwards;
+}
+
+@keyframes fadeInWrapper {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+form input:focus {
+  box-shadow: 0 0 10px rgba(103, 90, 254, 0.8);
+}
+
+.select-box {
+  opacity: 0;
+  animation: fadeInSelectBox 1s ease forwards;
+}
+
+@keyframes fadeInSelectBox {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+  animation-duration: 2s;
+}
